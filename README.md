@@ -1,7 +1,7 @@
 <details>
   <summary>简体中文</summary>
 
-  # 修复一个错误的文本，然后使用Git提交
+  # 修复一个错误的文本，在实战中学习`git`的基本操作
 
   这是一个教学，旨在帮助你学习Git的基本操作：clone/add/commit/push。
   这是世界上几乎每个开发者的日常工作内容，所以最好从现在就开始熟悉它。
@@ -13,7 +13,7 @@
 
 </details>
 
-# Fix a Typo, and Commit It with Git
+# Fix a Typo, and Learn `git` in Practice
 
 This challenge is intended to teach you how to us basic Git operations: clone/add/commit/push.
 
