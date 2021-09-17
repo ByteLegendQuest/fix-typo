@@ -1,0 +1,21 @@
+name: check
+
+on: pull_request
+
+jobs:
+  check:
+    runs-on: 'ubuntu-latest'
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Checkout PR branch 
+        run: | 
+          git remote add ${{ github.event.pull_request.user.login }} ${{ github.event.pull_request.head.repo.html_url }} 
+          git fetch ${{ github.event.pull_request.user.login }} 
+          git switch -c ${{ github.event.pull_request.user.login }}_${{ github.event.pull_request.head.ref }} ${{ github.event.pull_request.user.login }}/${{ github.event.pull_request.head.ref }}
+      - name: Verify whitelist
+        run: bash -e -x .github/verifyWhitelist.sh
+      - name: Check
+        run: bash -e -x ./check.sh
