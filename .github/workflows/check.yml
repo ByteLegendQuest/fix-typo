@@ -8,16 +8,20 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: master
+          ref: main
           fetch-depth: 0
-      - name: Checkout PR branch 
-        run: | 
-          git remote add ${{ github.event.pull_request.user.login }} ${{ github.event.pull_request.head.repo.html_url }} 
-          git fetch ${{ github.event.pull_request.user.login }} 
-          git switch -c ${{ github.event.pull_request.user.login }}_${{ github.event.pull_request.head.ref }} ${{ github.event.pull_request.user.login }}/${{ github.event.pull_request.head.ref }}
-      - name: Sleep 3600
-        run: sleep 3600
-      - name: Verify whitelist
-        run: bash -e -x .github/verifyWhitelist.sh
-      - name: Check
+      - name: Checkout PR branch
+        run: |
+          git remote add pr ${{ github.event.pull_request.head.repo.html_url }}
+          git fetch pr
+          git switch -c pr/${{ github.event.pull_request.head.ref }} pr/${{ github.event.pull_request.head.ref }}
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+      - name: Check Problems in Code
+        run: |
+          wget https://github.com/ByteLegend/tools/releases/download/v1.0.0/code-checker.jar
+          java -jar code-checker.jar
+      - name: Verify
         run: bash -e -x ./check.sh
