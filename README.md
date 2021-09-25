@@ -34,7 +34,6 @@ In this challenge, you'll learn basic `git` commands: `clone`/`add`/`commit`/`pu
   - Fix the problem on your computer, and `add`/`commit`/`push` with git.
   - Create a pull request.
   - The bot will check your PR and tell you if you accomplish the challenge.
-- Go back to [ByteLegend](https://bytelegend.com) and continue your hero journey.
 
 > "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence that contains all of the letters of the English alphabet. Owing to its brevity and coherence, it has become widely known. The phrase is commonly used for touch-typing practice, testing typewriters and computer keyboards, displaying examples of fonts, and other applications involving text where the use of all letters in the alphabet is desired.
 > ——[Wikipedia](https://en.wikipedia.org/wiki/The_quick_brown_fox_jumps_over_the_lazy_dog)
