@@ -31,7 +31,7 @@ In this challenge, you'll learn basic `git` commands: `clone`/`add`/`commit`/`pu
 - There is a typo in [`fox-dog.txt`](https://github.com/ByteLegendQuest/fix-typo/blob/main/fox-dog.txt), please find it out and help us fix it. You need to:
   - Fork this repository.
   - Clone the repository you just forked.
-  - Fix the problem on your computer, and `add`/`commit`/`push` with `git`.
+  - Fix the problem on your computer, and `add`/`commit`/`push` with git.
   - Create a pull request.
   - The bot will check your PR and tell you if you accomplish the challenge.
 - Go back to [ByteLegend](https://bytelegend.com) and continue your hero journey.
