@@ -5,9 +5,9 @@
 
   世界上几乎每个开发者的日常工作都离不开`git`，所以最好从现在就开始熟悉它。
   在这个挑战中，你会学到`git`的基本操作：`clone`/`add`/`commit`/`push`。
-  
+
   ## 挑战
-  
+
   - [`fox-dog.txt`](https://github.com/ByteLegendQuest/fix-typo/blob/main/fox-dog.txt)中包含了一个<ruby>笔误<rt>typo</rt></ruby>，请找到并帮助我们修复它。你需要：
     - Fork这个仓库。
     - Clone你Fork的仓库。
@@ -15,7 +15,7 @@
     - 创建一个Pull Request。
     - 机器人将会检查你的PR，告诉你你是否通过了挑战。
   - 回到[字节传说](https://bytelegend.com)，然后继续你的英雄旅程。
-  
+
   > <ruby>"The quick brown fox jumps over the lazy dog"<rt>敏捷的棕色狐狸跨过懒狗</rt></ruby>是一个著名的包含了英语的全部26个字母的短句，常被用于测试字体的显示效果和键盘有没有故障。
   > ——[维基百科](https://zh.wikipedia.org/wiki/The_quick_brown_fox_jumps_over_the_lazy_dog)
 
