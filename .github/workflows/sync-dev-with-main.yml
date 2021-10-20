@@ -11,11 +11,11 @@ jobs:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
+          fetch-depth: 0
       - name: Merge main to dev
         run: >
           git config user.name ByteLegendBot &&
           git config user.email bot@bytelegend.com &&
-          git fetch origin &&
           git switch -c dev origin/dev &&
           git merge origin/main -m 'Sync with main' &&
           git push https://${{ secrets.BYTELEGENDBOT_TOKEN }}@github.com/${{ github.event.repository.full_name }}.git 'HEAD:dev'
