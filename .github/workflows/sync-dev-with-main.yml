@@ -17,5 +17,5 @@ jobs:
           git config user.email bot@bytelegend.com &&
           git switch dev &&
           git merge main -m 'Sync with main' &&
-          git push ${{ secrets.BYTELEGENDBOT_TOKEN }}@github.com/${{  github.event.repository.full_name  }}.git HEAD:dev
+          git push https://${{ secrets.BYTELEGENDBOT_TOKEN }}@github.com/${{ github.event.repository.full_name }}.git HEAD:dev
 
