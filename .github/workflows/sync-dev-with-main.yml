@@ -1,0 +1,21 @@
+name: sync-dev-with-main
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Merge main to dev
+        run: >
+          git config user.name ByteLegendBot &&
+          git config user.email bot@bytelegend.com &&
+          git switch dev &&
+          git merge main -m 'Sync with main' &&
+          git push ${{ secrets.BYTELEGENDBOT_TOKEN }}@github.com/${{ github.event.pull_request.base.repo.full_name }}.git HEAD:dev
+
