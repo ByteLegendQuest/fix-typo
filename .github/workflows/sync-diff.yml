@@ -1,0 +1,28 @@
+
+name: sync-diff
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - dev
+
+jobs:
+  sync:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          repository: ByteLegend/quests
+          fetch-depth: 0
+          token: ${{ secrets.BYTELEGENDBOT_TOKEN }}
+      - name: Sync diff
+        run: >
+          mkdir -p challenges/GitIsland/git-commit-and-push/git-commit-and-push-challenge/diffs &&
+          curl -L https://github.com/${{ github.event.repository.full_name }}/pull/${{ github.event.pull_request.number }}.diff --output challenges/GitIsland/git-commit-and-push/git-commit-and-push-challenge/diffs/pr-${{ github.event.pull_request.number }}.diff &&
+          git config user.email bot@bytelegend.com &&
+          git config user.name ByteLegendBot &&
+          git add challenges/GitIsland/git-commit-and-push/git-commit-and-push-challenge/diffs &&
+          git commit -m 'Sync diff from https://github.com/${{ github.event.repository.full_name }}/pull/${{ github.event.pull_request.number }}' &&
+          git push https://${{ secrets.BYTELEGENDBOT_TOKEN }}@github.com/ByteLegend/quests.git
