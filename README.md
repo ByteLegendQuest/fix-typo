@@ -22,6 +22,9 @@
 - `fox-dog.txt`
 </details>
 
+<details open='true'>
+  <summary>English</summary>
+
 # Learn `git` in Practice
 `git` is used by nearly every developer on this planet in their daily work. So you'd better start learning it today.
 In this challenge, you'll learn basic `git` commands: `clone`/`add`/`commit`/`push`.
@@ -42,3 +45,4 @@ In this challenge, you'll learn basic `git` commands: `clone`/`add`/`commit`/`pu
 Any changes to files other than the following files will be rejected:**
 
 - `fox-dog.txt`
+</details>
