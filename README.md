@@ -11,7 +11,7 @@
     - Clone你Fork的仓库。
     - 在你的电脑上修复这个问题，使用`git`进行`add`/`commit`/`push`。
     - 创建一个Pull Request。
-    - 机器人将会检查你的PR，告诉你你是否通过了挑战。
+    - 机器人将会检查你的答案，告诉你你是否通过了挑战。
   - 回到[字节传说](https://bytelegend.com)，然后继续你的英雄旅程。
 
   > <ruby>"The quick brown fox jumps over the lazy dog"<rt>敏捷的棕色狐狸跨过懒狗</rt></ruby>是一个著名的包含了英语的全部26个字母的短句，常被用于测试字体的显示效果和键盘有没有故障。
