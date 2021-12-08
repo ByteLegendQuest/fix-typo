@@ -1,7 +1,7 @@
 name: daily
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
   schedule:
     - cron: '24 0 * * *'
 
