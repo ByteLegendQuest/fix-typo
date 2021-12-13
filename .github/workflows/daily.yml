@@ -6,7 +6,7 @@ on:
     - cron: '24 23 * * *'
 
 jobs:
-  check:
+  clean:
     runs-on: ubuntu-latest
     steps:
       - name: Clean
