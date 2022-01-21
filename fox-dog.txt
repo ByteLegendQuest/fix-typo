@@ -1,1 +1,4 @@
-The quick brown fox jumps over the lazy doog；
+The quick brown fox jumps over the lazy doog.
+git clone https://github.com/ByteLegendQuest/fix-typo/blob/main/fox-dog.
+git status -s
+
