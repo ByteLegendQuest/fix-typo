@@ -17,7 +17,6 @@ In this challenge, you'll learn basic `git` commands: `clone`/`add`/`commit`/`pu
 > "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence that contains all of the letters of the English alphabet. Owing to its brevity and coherence, it has become widely known. The phrase is commonly used for touch-typing practice, testing typewriters and computer keyboards, displaying examples of fonts, and other applications involving text where the use of all letters in the alphabet is desired.
 > ——[Wikipedia](https://en.wikipedia.org/wiki/The_quick_brown_fox_jumps_over_the_lazy_dog)
 
-
 **Note: we only allow you to modify the following files.
 Any changes to files other than the following files will be rejected:**
 
@@ -41,7 +40,6 @@ Any changes to files other than the following files will be rejected:**
 
 > <ruby>"The quick brown fox jumps over the lazy dog"<rt>敏捷的棕色狐狸跨过懒狗</rt></ruby>是一个著名的包含了英语的全部26个字母的短句，常被用于测试字体的显示效果和键盘有没有故障。
 > ——[维基百科](https://zh.wikipedia.org/wiki/The_quick_brown_fox_jumps_over_the_lazy_dog)
-
 
 **注意：我们只允许您修改以下文件，任何对其他文件的修改都会被拒绝：**
 
