@@ -13,6 +13,14 @@ jobs:
           persist-credentials: false
           ref: main
           fetch-depth: 0
+      - name: Validate PR branch name
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const branchName = context.payload.pull_request.head.ref;
+            if (!/^[\w/-]*$/.test(branchName)) {
+              throw new Error(`Invalid branch name: ${branchName}`);
+            }    
       - name: Checkout PR branch
         run: |
           git remote add pr ${{ github.event.pull_request.head.repo.html_url }}
