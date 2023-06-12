@@ -68,7 +68,7 @@ jobs:
           -DprLocalBranch=pr/${{ github.event.pull_request.head.ref }}
           -DprAuthor=${{ steps.determine-player-username.outputs.player-github-username }}
           -DprNumber=${{ github.event.pull_request.number }}
-          -DprTitle='${{ github.event.pull_request.title }}'
+          -DprTitleEncoded=${{ steps.encode-pr-title.outputs.encoded-title }}
           -DprHeadSha=${{ github.event.pull_request.head.sha }}
           -DpushUrl=https://${{ secrets.BYTELEGENDBOT_TOKEN }}@github.com/${{ github.event.pull_request.base.repo.full_name }}.git
           -jar code-merger.jar
