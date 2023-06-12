@@ -28,6 +28,14 @@ jobs:
             } else {
                 core.setOutput('player-github-username', context.payload.pull_request.user.login)
             }
+      - name: Base64 encode PR title
+        id: encode-pr-title
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const title = context.payload.pull_request.title;
+            const encodedTitle = Buffer.from(title).toString('base64');
+            core.setOutput('encoded-title', encodedTitle);    
       - uses: actions/setup-java@v2
         with:
           distribution: 'temurin'
@@ -43,7 +51,7 @@ jobs:
           -DprLocalBranch=pr/${{ github.event.pull_request.head.ref }}
           -DprAuthor=${{ steps.determine-player-username.outputs.player-github-username }}
           -DprNumber=${{ github.event.pull_request.number }}
-          -DprTitle='${{ github.event.pull_request.title }}'
+          -DprTitleEncoded=${{ steps.encode-pr-title.outputs.encoded-title }}
           -DprHeadSha=${{ github.event.pull_request.head.sha }}
           -DapiUrl=https://bytelegend.com
           -DcodeCheckerSecret=${{ secrets.CODE_CHECKER_SECRET }}
