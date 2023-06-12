@@ -40,7 +40,6 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '11'
-          cache: 'maven'
       - name: Check Problems in Code
         # TODO: https://github.community/t/sanitizing-quotes-in-pr-titles/169175/6
         run: >
